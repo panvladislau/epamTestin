@@ -70,8 +70,6 @@ function getGoogle(n) {
 	return `g${oStr}gle`;
 }
 
-console.log(getGoogle(3));
-
 /**
  * write function that returns object based on the given information 
  * (params may be null, so, please use default ones)
@@ -90,8 +88,6 @@ function getUser(firstName, lastName, age) {
 	}
 }
 
-console.log(getUser("John", "Dou", 42))
-
 /**
  * write function that calculates total path traveled.
  * path represended as array of objects with field distance and direction
@@ -103,8 +99,6 @@ function getTotalPath(path) {
 }
 
 let path = [{direction: "Kiyv - Minsk", distance: 567}, {direction: "Kiyv - Paris", distance: 2402}];
-
-console.log(getTotalPath(path));
 
 /**
  * write a function that will calculate a discount considering the Amount
@@ -124,8 +118,6 @@ function discountFunction(percentage) {
 }
 
 const discount10 = discountFunction(10);
-console.log(discount10(90)); // 81
-console.log(discount10(100)); // 90
 
 /**
  * Write the methods inside the given objects that:
@@ -149,7 +141,6 @@ const myObject = {
 };
 
 myObject.keys();
-console.log(myObject.call());
 
 module.exports = {
 	sum,

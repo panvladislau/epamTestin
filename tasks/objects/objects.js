@@ -8,10 +8,8 @@ const person = {
 }; 
 
 person.getFulName = function(){
-	return this.firstName + " " + this.lastName;
+	return `${this.firstName} ${this.lastName}`;
 }
-
-console.log(person.getFulName());
 
 /**
  * create object student that has property grade and method getGrade
@@ -24,17 +22,13 @@ const student = {
 student.__proto__ = person;
 
 student.getFulName = function(){
-	return this.firstName + " " + this.lastName + " " + this.grade;
+	return `${this.firstName} ${this.lastName} ${this.grade}`;
 }
-
-console.log(student.getFulName());
 
 /**
  * create new instance of student using Object.create
  */
 const student2 = Object.create(student);
-
-console.log(student2.getFulName());
 
 module.exports = {
 	person,

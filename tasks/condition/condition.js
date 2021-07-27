@@ -19,8 +19,6 @@ if( y < 10 ){
 
 y < 10 ? z2 = x + y : z2 = x * y;
 
-console.log(z1, z2)
-
 
 /** TODO
  * The system receives 3 params - alpha, beta, operator.
@@ -49,9 +47,6 @@ function manipulations(alpha, beta, operator){
     }
 }
 
-console.log(manipulations(5,2,"divide"))
-
-
 
 /**
  * TODO
@@ -77,7 +72,6 @@ if( redemption >= 0 && redemption <= 350){
     discount = redemption * 45 / 100;
 }
 
-console.log(discount);
 
 //TODO put your code here
 

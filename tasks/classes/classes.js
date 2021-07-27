@@ -13,7 +13,7 @@ class Person{
     }
 
     getFullname(){
-        return this.firstName + " " + this.lastName;
+        return `${this.firstName} ${this.lastName}`;
     }
 }
 
@@ -38,11 +38,6 @@ class Student extends Person{
 
 const person = new Person("Boris", "Bern"); //create instance of class person
 const student = new Student("Ilya","Solomon",8); //create instance of class student
-
-console.log(person);
-console.log(student.getFullname());
-console.log(student.getGrade());
-
 
 module.exports = {
     person,

@@ -34,10 +34,6 @@ doFactorial = function(n){
   return result;
 }
 
-console.log(forFactorial(n));
-console.log(whileFactorial(n));
-console.log(doFactorial(n));
-
 /** TODO
  * return the concatenated string from an array of substring
  * assign the result to variable 'str'
@@ -45,7 +41,6 @@ console.log(doFactorial(n));
 let str;
 const substr = ["I", " love", " JS"];
 str = substr.join(" ");
-console.log(str);
 
 /** TODO
  * calculate a total of income of certain person
@@ -58,9 +53,9 @@ const personIncomes = {
   interestOnDeposit: 250,
   otherExpences: -300
 };
-let numArr = Object.values(personIncomes);
-numArr = numArr.reduce((total, el) => el + total, 0)
-console.log(numArr);
+
+let totalIncome = Object.values(personIncomes);
+totalIncome = numArr.reduce((total, el) => el + total, 0)
 
 module.exports = {
   forFactorial,
