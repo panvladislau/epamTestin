@@ -1,0 +1,20 @@
+{
+  "name": "bbcfarme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jasmine": "^3.7.0",
+    "protractor": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "pretest": "webdriver-manager update",
+    "test": "protractor conf.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
