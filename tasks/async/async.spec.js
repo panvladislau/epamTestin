@@ -42,13 +42,15 @@ describe('Promises', () => {
 		 */
 		promise1();
 		promise2();
-		Promise.all(promise1,promise2).then()
+		Promise.all([promise1(),promise2()]).then((res) => {
+			expect(res).to.include('promise1');
+			expect(res).to.include('promise2');
+		})
 
 		/**
 		 * 3. Place 2 following expect()'s inside the .then() block
 		 */
-		 expect(res).to.include('promise1');
-		 expect(res).to.include('promise2');
+	
 	});
 
 
@@ -61,7 +63,7 @@ describe('Async/await', () => {
 		 * Save the result as the variable 'res';
 		 */
 		//Place you code here:
-		myPromise(true);
+		let res = await myPromise(true);
 
 
 		// end of your code
@@ -74,14 +76,19 @@ describe('Async/await', () => {
 		 * hint: use try..catch block
 		 */
 		//Place you code here:
-		myPromise();
 
+		let e;
+		try {
+			e = await myPromise();
+		} catch (e) {
+			expect(e).to.equal('I am rejected');
+		}
 
 		// end of your code
 		/**
 		 * 2. Place it inside the catch {} block
 		 */
-		expect(e).to.equal('I am rejected');
+		//expect(e).to.equal('I am rejected');
 	});
 
 	it('should resolve the set of promises using async/await', async () => {
@@ -93,7 +100,7 @@ describe('Async/await', () => {
 		//Place you code here:
 		promise1();
 		promise2();
-
+		let res = await  Promise.all([promise1(), promise2()]);
 
 		// end of your code
 		 expect(res).to.include('promise1');
