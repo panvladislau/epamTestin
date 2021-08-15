@@ -15,6 +15,16 @@ class mongo{
            });
         })
     }
+
+    async getDBData(namedb, collectiondb){
+        await mongoClient.connect();
+        const db = mongoClient.db(namedb);
+        const collection = db.collection(collectiondb);
+        const results = await collection.find().toArray();
+        let arr = results.map(el => [el.name, String(el.age)]);
+        await mongoClient.close();
+        return arr;
+    }
 }
 
 module.exports = new mongo();
