@@ -1,6 +1,4 @@
 const { google } = require("googleapis");
-keyFile: "credentials.json"
-scopes: "https://www.googleapis.com/auth/spreadsheets"
 
 class googleApi{
     async auntificate(credentials, scope){
